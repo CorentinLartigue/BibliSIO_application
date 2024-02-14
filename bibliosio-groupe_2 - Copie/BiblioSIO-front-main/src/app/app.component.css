@@ -1,0 +1,17 @@
+nav {
+  text-align: center;
+  background-color: var(--base-color);
+}
+
+nav a {
+  color: white;
+}
+
+
+nav a:hover {
+  color: var(--link-hover-color);
+}
+
+main {
+  padding: 1%;
+}

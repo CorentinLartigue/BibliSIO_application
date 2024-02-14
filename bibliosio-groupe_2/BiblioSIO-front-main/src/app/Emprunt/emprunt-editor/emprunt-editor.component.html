@@ -1,0 +1,14 @@
+<h1><span *ngIf="creating">Créer</span><span *ngIf="updating">Modifier</span> un emprunt : </h1>
+<form (ngSubmit)="edit()" #myForm="ngForm">
+    <label for="emprunteur">Emprunteur</label><select [(ngModel)]="emprunt.emprunteur" id="emprunteur" name="emprunteur">
+        <option *ngFor="let emprunteur of emprunteurs$ | async" [ngValue]="emprunteur">{{emprunteur.nom +" "+ emprunteur.prenom}}</option>
+    </select>
+    <label for="exemplaire">Exemplaire</label><select [(ngModel)]="emprunt.exemplaire" id="exemplaire" name="exemplaire">
+        <option *ngFor="let exemplaire of exemplaires$ | async" [ngValue]="exemplaire">{{exemplaire.titre}}</option>
+    </select>
+    <label *ngIf="updating" for="dateRetour">Date retour :</label><input *ngIf="updating" [(ngModel)]="emprunt.dateRetour" id="dateRetour" name="dateRetour">
+    <label *ngIf="updating" for="statut">Statut :</label><select *ngIf="updating" [(ngModel)]="emprunt.statut" id="statut" name="statut">
+        <option *ngFor="let statut of statuts">{{statut}}</option>
+    </select>
+    <button type="submit">Envoyer</button><button type="reset">Reset</button>
+</form>

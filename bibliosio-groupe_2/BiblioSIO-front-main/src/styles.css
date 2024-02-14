@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  color: var(--text-color);
+  font-family: 'Raleway', sans-serif;
+}
+
+body {
+  background-color: var(--background-color);
+}
+
+a {
+  display: inline-block;
+  margin: 5px;
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+a:visited {
+  color: var(--link-color);
+}
+
+a:hover {
+  color: var(--link-hover-color);
+}
+
+button {
+  padding: 1%;
+  margin: 0.5%;
+  color: var(--background-color);
+  background-color: var(--secondary-color);
+}
+
+button:hover {
+  background-color: var(--secondary-hover-color);
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin-left: 24%;
+}
+
+input, select {
+  padding: 1%;
+  border: 1px solid;
+}
+
+:root {
+  --base-color: #2e88be;
+  --link-color: #571b04;
+  --link-hover-color: #912d07;
+  --background-color: #e5e5e8;
+  --text-color: #131B23;
+  --secondary-color: #5e514c;
+  --secondary-hover-color: #968179;
+  --create-button: green;
+  --create-button-hover: #00a600;
+}
+/* You can add global styles to this file, and also import other style files */

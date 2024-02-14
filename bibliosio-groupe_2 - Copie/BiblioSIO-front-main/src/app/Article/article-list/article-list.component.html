@@ -1,0 +1,7 @@
+<h1>Liste des articles : </h1>
+<app-article-details
+  *ngFor="let article of articles"
+  (click)="openArticleDetails(article)"
+  [article]="article"
+  [solo]="false"></app-article-details>
+<button class="create" (click)="openCreateArticle()">Créer</button>

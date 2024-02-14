@@ -1,0 +1,17 @@
+<h1 *ngIf="solo">Détail revue : </h1>
+<article>
+  <div class="entity">
+    <p>{{revue.titre}}</p>
+    <details>
+      <summary>Exemplaires :</summary>
+      <ul>
+        <li *ngFor="let exemplaire of revue.exemplaires"><a [href]="exemplaire.url">{{exemplaire.value}}</a></li>
+      </ul>
+    </details>
+  </div>
+  <div class="controls">
+    <button (click)="update()">Modifier</button>
+    <button (click)="delete()">Supprimer</button>
+  </div>
+</article>
+

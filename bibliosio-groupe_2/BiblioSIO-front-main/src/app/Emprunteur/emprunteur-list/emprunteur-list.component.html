@@ -1,0 +1,7 @@
+<h1>Liste des emprunteurs : </h1>
+<app-emprunteur-details *ngFor="let emprunteur of emprunteurs"
+                        (click)="openEmprunteurDetails(emprunteur)"
+                        [emprunteur]="emprunteur"
+                        [solo]="false">
+</app-emprunteur-details>
+<button class="create" (click)="openCreateEmprunteur()">Créer</button>

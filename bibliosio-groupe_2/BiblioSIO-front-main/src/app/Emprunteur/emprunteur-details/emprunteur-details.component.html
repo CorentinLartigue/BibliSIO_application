@@ -1,0 +1,22 @@
+<h1 *ngIf="solo">Détail emprunteur : </h1>
+<article>
+  <div class="entity">
+    <p><span class="bold">Nom : </span>{{emprunteur.nom}}</p>
+    <p><span class="bold">Prénom : </span>{{emprunteur.prenom}}</p>
+    <p><span class="bold">Mail : </span>{{emprunteur.mail}}</p>
+    <p><span class="bold">Promotion : </span>{{emprunteur.promo}}</p>
+    <p><span class="bold">Classe : </span>{{emprunteur.classe}}</p>
+    <details>
+      <summary>Emprunts :</summary>
+      <ul>
+        <li *ngFor="let emprunt of emprunteur.emprunts"><a [href]="emprunt.url">{{emprunt.value}}</a></li>
+      </ul>
+    </details>
+
+  </div>
+  <div class="controls">
+    <button (click)="update()">Modifier</button>
+    <button (click)="delete()">Supprimer</button>
+  </div>
+</article>
+

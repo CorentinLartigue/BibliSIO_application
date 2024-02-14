@@ -1,0 +1,7 @@
+<h1>Liste des revues : </h1>
+<app-revue-details
+  *ngFor="let revue of revues"
+  (click)="openRevueDetails(revue)"
+  [revue]="revue"
+  [solo]="false"></app-revue-details>
+<button class="create" (click)="openCreateRevue()">Créer</button>

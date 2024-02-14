@@ -1,0 +1,21 @@
+<h1 *ngIf="solo">Détail exemplaire : </h1>
+<article>
+  <div class="entity">
+    <p>{{exemplaire.titre}}</p>
+    <a [href]="exemplaire.revue.url">{{exemplaire.revue.value}}</a>
+    <p>{{exemplaire.moisParution}}</p>
+    <p>{{exemplaire.anneeParution}}</p>
+    <details>
+      <summary>Articles :</summary>
+      <ul>
+        <li *ngFor="let article of exemplaire.articles"><a [href]="article.url">{{article.value}}</a></li>
+      </ul>
+    </details>
+    <p>{{statut()}}</p>
+  </div>
+  <div class="controls">
+    <button (click)="update()">Modifier</button>
+    <button (click)="delete()">Supprimer</button>
+  </div>
+</article>
+

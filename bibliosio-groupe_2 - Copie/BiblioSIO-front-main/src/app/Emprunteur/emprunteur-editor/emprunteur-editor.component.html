@@ -1,0 +1,9 @@
+<h1><span *ngIf="creating">Créer</span><span *ngIf="updating">Modifier</span> un emprunteur : </h1>
+<form (ngSubmit)="edit()">
+    <label for="nom">Nom :</label><input [(ngModel)]="emprunteur.nom" id="nom" name="nom">
+    <label for="prenom">Prénom :</label><input [(ngModel)]="emprunteur.prenom" id="prenom" name="prenom">
+    <label for="mail">Mail :</label><input [(ngModel)]="emprunteur.mail" id="mail" name="mail">
+    <label for="promo">Promo :</label><input [(ngModel)]="emprunteur.promo" id="promo" name="promo">
+    <label for="classe">Classe :</label><input [(ngModel)]="emprunteur.classe" id="classe" name="classe">
+    <button type="submit">Envoyer</button><button type="reset">Reset</button>
+</form>

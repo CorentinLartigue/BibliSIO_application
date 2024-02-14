@@ -1,0 +1,9 @@
+<h1><span *ngIf="creating">Créer</span><span *ngIf="updating">Modifier</span> un article : </h1>
+<form (ngSubmit)="edit()">
+    <label for="exemplaire">Exemplaire</label><select [(ngModel)]="article.exemplaire" id="exemplaire" name="exemplaire">
+        <option *ngFor="let exemplaire of exemplaires$ | async" [ngValue]="exemplaire">{{exemplaire.titre}}</option>
+    </select>
+    <label for="titre">Titre :</label><input [(ngModel)]="article.titre" id="titre" name="titre">
+    <label for="description">Description :</label><input [(ngModel)]="article.description" id="description" name="description">
+    <button type="submit">Envoyer</button><button type="reset">Reset</button>
+</form>

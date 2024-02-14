@@ -1,0 +1,7 @@
+<h1>Liste des exemplaires : </h1>
+<app-exemplaire-details
+  *ngFor="let exemplaire of exemplaires"
+  (click)="openExemplaireDetails(exemplaire)"
+  [exemplaire]="exemplaire"
+  [solo]="false"></app-exemplaire-details>
+<button class="create" (click)="openCreateExemplaire()">Créer</button>

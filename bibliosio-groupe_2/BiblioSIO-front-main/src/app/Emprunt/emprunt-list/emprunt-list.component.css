@@ -1,0 +1,7 @@
+.create {
+  background-color: var(--create-button);
+}
+
+.create:hover {
+  background-color: var(--create-button-hover);
+}
