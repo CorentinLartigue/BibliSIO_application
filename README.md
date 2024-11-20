@@ -49,7 +49,7 @@ Avant de commencer, tu dois t'assurer d'avoir les outils suivants installés sur
 
 **Cloner le projet** à partir du repository. `git clone https://github.com/CorentinLartigue/BibliSIO_application.git`
 
-
+---
 
 ### **Back-End (Spring Boot)**
 
